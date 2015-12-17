@@ -41,7 +41,7 @@
 	names(means)[1]<-name.y
 #   row.names(means)<-means[,1]
 	ntr<-nrow(means)
-	Tprob <- qtukey((1-alpha)^(1:(ntr-1)),2:ntr, DFerror)
+	Tprob <- qtukey_stable((1-alpha)^(1:(ntr-1)),2:ntr, DFerror)
 	nr <- unique(nn[,2])
 	
 #"Critical Value of Studentized Range")
